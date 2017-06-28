@@ -7,9 +7,9 @@ $hover-scale: 2;
 
 .absolute {
     position: absolute;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
 }
 
@@ -18,7 +18,6 @@ $hover-scale: 2;
 }
 
 .trim-background-mask {
-    background: $red-primary;
     border: 1px solid $red-tertiary;
     opacity: 0.5;
 
@@ -43,10 +42,10 @@ $hover-scale: 2;
 
 .trim-line {
     position: absolute;
+    top: 0;
     width: 0px;
     height: 100%;
     border: 1px solid $red-tertiary;
-    top: 0;
 }
 
 .playhead {
@@ -62,11 +61,10 @@ $hover-scale: 2;
 }
 
 .trim-handle {
-    width: $trim-handle-width;
-    height: $trim-handle-height;
-
     position: absolute;
     left: calc(-$trim-handle-width / 2);
+    width: $trim-handle-width;
+    height: $trim-handle-height;
 }
 
 .trim-handle img {
@@ -74,6 +72,7 @@ $hover-scale: 2;
     width: $trim-handle-width;
     height: $trim-handle-height;
 
+    /* Make sure image dragging isn't triggered */
     user-select: none;
     user-drag: none;
     -webkit-user-drag: none; /* Autoprefixer doesn't seem to work for this */
